@@ -2,15 +2,15 @@
 		position: relative;
 		background-image: url('../Images/Inicio.jpg');
 		border-bottom: solid 1px #ccc;
-		padding: 5em 0 4em 0;
+		padding: 3em 0 2em 0;
 		text-align: center;
 	}
 
 		#header h1 {
-			color: #252122;
+			color: #F55506;
 			font-weight: 900;
-			font-size: 2.5em;
-			letter-spacing: -0.035em;
+			font-size: 3.5em;
+			letter-spacing: -0.050em;
 			line-height: 1;
 		}
 #nav {
@@ -47,7 +47,7 @@
 					background: #E8D0D0;
 				}
 
-				#nav > ul > li.current > a {
+				#nav > ul > li > a {
 					background: #F55506;
 					color: #fff !important;
 					font-weight: 700;
@@ -103,14 +103,14 @@
 
 
 #banner {
-		background: #CCE8F4 url("https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-cartoon-hand-drawn-yellow-pet-supplies-illustration-background-image_275642.jpg");
+		background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-cartoon-hand-drawn-yellow-pet-supplies-illustration-background-image_275642.jpg");
 		background-position: center center;
-		background-size: auto 100%;
+		background-size: auto 80%;
 		background-repeat: no-repeat;
 		text-align: center;
 		position: relative;
-		padding: 8em 0;
-		margin: 4em 0 0 0;
+		padding: 1em 0;
+		margin: 1em 0 0 0;
 	}
 
 		#banner header {
@@ -134,3 +134,4 @@
 				margin: 0;
 				font-size: 1.5em;
 			}
+						
