@@ -4,7 +4,6 @@ d3.dsv(";","../Data/PetsCitizens.csv")
 .then( function(data){
   allData = data;
   printData();
-  manojoDeArreglo();
 })
 .catch(function(error){
   //handle error
@@ -44,12 +43,24 @@ function printData(){
 }
 
 function manojoDeArreglo(){
-
-  allData.push({"microchip" : "1312312", "species" : "1312312", "sex" : "1312312", "size" : "1312312", "potentDangerous" : "1312312", "neighborhood" : "1312312"});
-
+  console.log("Hola");
+  var microchip = null;
+  microchip = document.getElementById("name").value;
+   var species = null;
+  species = document.getElementById("mail").value;
+   var sex = null;
+  sex = document.getElementById("pot").value;
+   var size = null;
+  size = document.getElementById("sex").value;
+   var potentDangerous = null;
+  potentDangerous = document.getElementById("si").value;
+   var neighborhood = null;
+  neighborhood = document.getElementById("sp").value;
+  alert(microchip + " " + species + " " + sex + " " + size + " " + potentDangerous + " " + neighborhood )
+  console.log(allData[allData.length - 1]);
+  allData.push({"microchip" : microchip, "species" : species, "sex" : sex, "size" : size, "potentDangerous" : potentDangerous, "neighborhood" : neighborhood});
+  console.log(allData[allData.length - 1]);
 
 }
 
-function cargarTabla(){
 
-}
