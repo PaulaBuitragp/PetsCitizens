@@ -42,25 +42,27 @@ function printData(){
   allData[0] = {...allData[0],sex : "MACHO"};
 }
 
-function manojoDeArreglo(){
-  console.log("Hola");
+function agregarMascota(){
   var microchip = null;
-  microchip = document.getElementById("name").value;
+  microchip = document.getElementById("microchip").value;
    var species = null;
-  species = document.getElementById("mail").value;
+  species = document.getElementById("cf").value;
    var sex = null;
-  sex = document.getElementById("pot").value;
+  sex = document.getElementById("hm").value;
    var size = null;
-  size = document.getElementById("sex").value;
+  size = document.getElementById("mpg").value;
    var potentDangerous = null;
-  potentDangerous = document.getElementById("si").value;
+  potentDangerous = document.getElementById("pe").value;
    var neighborhood = null;
-  neighborhood = document.getElementById("sp").value;
+  neighborhood = document.getElementById("localidad").value;
   alert(microchip + " " + species + " " + sex + " " + size + " " + potentDangerous + " " + neighborhood )
-  console.log(allData[allData.length - 1]);
   allData.push({"microchip" : microchip, "species" : species, "sex" : sex, "size" : size, "potentDangerous" : potentDangerous, "neighborhood" : neighborhood});
   console.log(allData[allData.length - 1]);
-
 }
+
+function editarMascota(){
+  
+}
+
 
 

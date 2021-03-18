@@ -2,105 +2,112 @@
 <head>
   <title>Pets Citizens</title>
   <meta charset="utf-8" />
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
   <link rel="stylesheet" href="..\css\main.css" />
-  <style type="text/css">
-    .paragraph {
-      color: red;
-    } 
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="..\css\estilos.css" />
+
 </head>
-<body>
-
-  <div class = 'color'>
-  <section id="header">
-    <h1><a>Pets Citizens</a></h1>
-    <nav id="nav">
-      <ul>
-       <li class="current"><a href="Inicio.html">Inicio</a></li>
-        <li><a href="ListaMascotas.html">Lista de mascotas</a></li>
-        <li><a href="EditarLista.html">Editar</a></li>
-        <li><a href="Agregar.html">Agregar</a></li>
-        <li><a href="Geolocalizacion.html">Geolocalización</a></li>
-      </ul>
-    </nav>
-    <section id="banner">
-      <header>
-        <h2>Ciudadanos de cuatro patas</h2>
-        <p>Posdata: Hola</p>
-      </header>
+<body >
+  <div class = "container">
+    <div class = 'color'>
+      <section id="header">
+        <h1><a>Pets Citizens</a></h1>
+        <nav id="nav">
+          <ul>
+           <li class="current"><a href="Index.html">Inicio</a></li>
+           <li><a href="ListaMascotas.html">Lista de mascotas</a></li>
+           <li><a href="EditarLista.html">Editar</a></li>
+           <li><a href="Agregar.html">Agregar</a></li>
+           <li><a href="Geolocalizacion.html">Geolocalización</a></li>
+         </ul>
+       </nav>
+       <section id="banner">
+        <header>
+          <h2>Ciudadanos de cuatro patas</h2>
+          <p>Posdata: Hola</p>
+        </header>
+      </section>
     </section>
-  </section>
   </div>
+  <div>
+    <section id="main">
+    <article class="box post">
+      <header>
+        <h2>Registro de mascotas</h2>
+        <p>En el formulario que encuentra acontinuación, digite los datos requeridos en cada uno de los espacios.
+        </p> 
+        <p>
+          Haga click en el botón de enviar el cual se encuentra ubicado en la parte inferior para registrar su mascota. 
 
-<section id="main">
-          <div class="container">
+        </p>
+      </header>
 
-            <!-- Content -->
-              <article class="box post">
-                <header>
-                  <h2>Registro de mascotas</h2>
-                  <p>En el formulario que encuentra acontinuación, digite los datos requeridos en cada uno de los espacios.
-                     </p> 
-                      <p>
-                        Haga click en el botón de enviar el cual se encuentra ubicado en la parte inferior para registrar su mascota. 
+      <h1>Agregue a su amigo de cuatro patas:</h1>
 
-                     </p>
-                </header>
-                
- <h1>Agregue a su amigo de cuatro patas:</h1>
+      <form action="Agregar.html" method="get">
+       <p>Microchip: <input id = "microchip" type="number" name="Microchip" size="70" placeholder="Escriba el microchip" required></p>
+       <p>Especie: <select  id = "cf" name = "especie" class="select-css"> required>
+        <option value="">--Seleccione--</option>
+        <option value="CANINO">Canino</option>
+        <option value="FELINO">Felino</option>
+      </select>
+    </p>
 
-  <form action="Agregar.html" method="get">
- <p>Microchip: <input type="number" name="Microchip" size="70" placeholder="Escriba el microchip" required></p>
-  <p>Especie:
-    <input type="radio" name="cf" value="c" required> Canino
-    <input type="radio" name="cf" value="f" required> Felino
+    <p>Sexo: <select  id = "hm" name = "sexo" class="select-css"> required>
+      <option value="">--Seleccione--</option>
+      <option value="MACHO">Macho</option>
+      <option value="HEMBRA">Hembra</option>
+    </select>
   </p>
- <p>Sexo:
-    <input type="radio" name="hm" value="m" required> Macho
-    <input type="radio" name="hm" value="h" required> Hembra
-  </p>
-  <p>Peligroso:
-    <input type="radio" name="pe" value="p" required> Si
-    <input type="radio" name="pe" value="e" required> No
-  </p>
-  <p>Tamaño:
-    <input type="radio" name="mpg" value="p" required> Pequeño
-    <input type="radio" name="mpg" value="m" required> Mediano
-    <input type="radio" name="mpg" value="g" required> Grande
-  </p>
-  <p>Vecindario: <select required>
-  <option value="">--Seleccione--</option>
-  <option>Antonio Nariño</option>
-  <option>Barrios Unidos</option>
-  <option>Bosa</option>
-  <option>Chapinero</option>
-  <option>Ciudad Bolivar</option>
-  <option>Engativá</option>
-  <option>Fontibón</option>
-  <option>Kennedy</option>
-  <option>La Candelaria</option>
-  <option>Los Martires</option>
-  <option>Puente Aranda</option>
-  <option>Rafael Uribe Uribe</option>
-  <option>San Cristóbal</option>
-  <option>Santa Fe</option>
-  <option>Suba</option>
-  <option>Sumapaz</option>
-  <option>Teusaquillo</option>
-  <option>Tunjuelito</option>
-  <option>Usaquen</option>
-  <option>Usme</option>
+  <p>Peligroso: <select  id = "pe" name = "peligroso" class="select-css"> required>
+    <option value="">--Seleccione--</option>
+    <option value="SI">SI</option>
+    <option value="NO">NO</option>
   </select>
-  </p>
-  <p>Dirección: <input type="text" name="Direccion" required></p>
-
-   
-  </p>
- <input type="reset" value="Borrar">
-    <button onclick="manojoDeArreglo()">Enviar</button> 
+</p>
+<p>Tamaño: <select  id = "mpg" name = "tamaño" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="PEQUEÑO">Pequeño</option>
+  <option value="MEDIANO">Mediano</option>
+  <option value="GRANDE">Grande</option>
+</select>
+</p>
+<p>Vecindario: <select  id = "localidad" name = "localidad" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="Antonio Nariño">Antonio Nariño</option>
+  <option value="Barrios Unidos">Barrios Unidos</option>
+  <option value="Bosa">Bosa</option>
+  <option value="Chapinero">Chapinero</option>
+  <option value="Ciudad Bolivar">Ciudad Bolivar</option>
+  <option value="Engativá">Engativá</option>
+  <option value="Fontibón">Fontibón</option>
+  <option value="Kennedy">Kennedy</option>
+  <option value="La Candelaria">La Candelaria</option>
+  <option value="Los Martires">Los Martires</option>
+  <option value="Puente Aranda">Puente Aranda</option>
+  <option value="Rafael Uribe Uribe">Rafael Uribe Uribe</option>
+  <option value="San Cristóbal">San Cristóbal</option>
+  <option value="Santa Fe">Santa Fe</option>
+  <option value="Suba">Suba</option>
+  <option value="Sumapaz">Sumapaz</option>
+  <option value="Teusaquillo">Teusaquillo</option>
+  <option value="Tunjuelito">Tunjuelito</option>
+  <option value="Usaquen">Usaquen</option>
+  <option value="Usme">Usme</option>
+</select>
+<p>Dirección: <input type="text" name="Direccion" required></p>
+<input type="reset" value="Borrar">
+<input name="ver" type="button" value = "Enviar" id="ver" onclick="agregarMascota()"/>
 </form>
 </article>
+</p>
+</form>
+</article>
+</section>
+  </div>
+</div>
 <script type="text/javascript" src="..\js\min.js"></script>
-  </body>
+</body>
 </html>

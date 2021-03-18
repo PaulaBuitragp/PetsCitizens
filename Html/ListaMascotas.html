@@ -1,156 +1,174 @@
-<!DOCTYPE html>
+<html>
 <head>
   <title>Pets Citizens</title>
   <meta charset="utf-8" />
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <link rel="stylesheet" href="..\css\main.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-  <style type="text/css">
-    .paragraph {
-      color: red;
-    } 
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="..\css\estilos.css" />
 </head>
 <body>
-
-  <div class = 'color'>
-    <section id="header">
-      <h1><a>Pets Citizens</a></h1>
-      <nav id="nav">
-        <ul>
-         <li class="current"><a href="Inicio.html">Inicio</a></li>
-         <li><a href="ListaMascotas.html">Lista de mascotas</a></li>
-         <li><a href="EditarLista.html">Editar</a></li>
-         <li><a href="Agregar.html">Agregar</a></li>
-         <li><a href="Geolocalizacion.html">Geolocalización</a></li>
-       </ul>
-     </nav>
-     <section id="banner">
-      <header>
-        <h2>Ciudadanos de cuatro patas</h2>
-        <p>Posdata: Hola</p>
-      </header>
+  <div class = "masco">
+    <div class = 'color'>
+      <section id="header">
+        <h1><a>Pets Citizens</a></h1>
+        <nav id="nav">
+          <ul>
+           <li class="current"><a href="Index.html">Inicio</a></li>
+           <li><a href="ListaMascotas.html">Lista de mascotas</a></li>
+           <li><a href="EditarLista.html">Editar</a></li>
+           <li><a href="Agregar.html">Agregar</a></li>
+           <li><a href="Geolocalizacion.html">Geolocalización</a></li>
+         </ul>
+       </nav>
+       <section id="banner">
+        <header>
+          <h2>Ciudadanos de cuatro patas</h2>
+          <p>Posdata: Hola</p>
+        </header>
+      </section>
     </section>
-  </section>
-</div>
+  </div>
 
-<section id="main">
-  <div class="container">
-
-    <!-- Content -->
-    <article class="box post">
-      <header>
-
-        <h1>Lista mascotas</h1>
-        <p>...</p>
-      </header>
-
-    </article>
-
-    <div  style="text-align: center" class="container">
-      <table id="table" class="table table-striped table-bordered" style="width:100%">
-
-        <thead>
-          <th>Microchip</th>
-          <th>species</th>
-          <th>sex</th>
-          <th>size</th>
-          <th>potentDangerous</th>
-          <th>neighborhood</th>
-        </thead>
-
-        <tbody id="cuerpo">
-
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-         
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-
-
-
-        </tbody>
-          
-
-       
-      </table>
-    </div>
+  <section id="main">
     <div>
-     <div>
+      <article class="box post">
+        <header>
 
-  <form action="">
- <ul>
-  <li>
-    <label for="name">Microchip:</label>
-    <input type="text" id="name" name="user_name">
-  </li>
-  <li>
-    <label for="mail">neighborhood:</label>
-    <input type="text" id="mail" name="user_mail">
-  </li>
-  <li>
-    <label for="msg">potentDangerous:</label>
-    <input type="text" id="pot">
-  </li>
-  <li>
-    <label for="msg">sex:</label>
-    <input type="text" id="sex">
-  </li>
-  <li>
-    <label for="msg">size:</label>
-    <input type="text" id="si">
-  </li>
-  <li>
-    <label for="msg">species:</label>
-    <input type="text" id="sp">
-  </li>
-  <li>
-   <input name="ver" type="button" value = "ver" id="ver" onclick="manojoDeArreglo()"/>
-  </li>
-  
- </ul>
-</form>
-</div>
+          <h1>Lista mascotas</h1>
+          <p>...</p>
+        </header>
+
+      </article>
+
+      <div  style="text-align: center">
+        <table id="table" class="display" style="width:50%" >
+
+          <thead>
+            <tr>
+              <th>Microchip</th>
+              <th>species</th>
+              <th>sex</th>
+              <th>size</th>
+              <th>potentDangerous</th>
+              <th>neighborhood</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     </div>
     <script type="text/javascript" src="..\js\min.js"></script>
-   <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
-    </script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
+  </script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
+  </script>
   <script>
    $(document).ready(function () {
     $('#table').DataTable({});
