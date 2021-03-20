@@ -9,38 +9,7 @@
   //handle error
 });
 
-
-  function printData(){
-    table = document.getElementById("table");
-    for(var i = 1; i < table.rows.length; i++)
-    {
-      for(var j = 0; j < table.rows[i].cells.length; j++)
-      { 
-        table.rows[i].cells[0].innerHTML = allData[i-1]["microchip"];
-      }
-      for(var j = 0; j < table.rows[i].cells.length; j++)
-      { 
-        table.rows[i].cells[1].innerHTML = allData[i-1]["species"];
-      }
-      for(var j = 0; j < table.rows[i].cells.length; j++)
-      { 
-        table.rows[i].cells[2].innerHTML = allData[i-1]["sex"];
-      }
-      for(var j = 0; j < table.rows[i].cells.length; j++)
-      { 
-        table.rows[i].cells[3].innerHTML = allData[i-1]["size"];
-      }
-      for(var j = 0; j < table.rows[i].cells.length; j++)
-      { 
-        table.rows[i].cells[4].innerHTML = allData[i-1]["potentDangerous"];
-      }
-      for(var j = 0; j < table.rows[i].cells.length; j++)
-      { 
-        table.rows[i].cells[5].innerHTML = allData[i-1]["neighborhood"];
-      }
-    }
-  }
-
+ 
   function agregarMascota(){
     var microchip = null;
     microchip = document.getElementById("microchip").value;
@@ -60,21 +29,28 @@
   }
 
   function editarMascota(){
-
-   var microchip1 = null;
-   var species1 = null;
-   var sex1 = null;
-   var size1 = null;
-   var potentDangerous1 = null;
-   var neighborhood1 = null;
-
+    var microchip = null;
+    microchip = document.getElementById("microchip").value;
+    var species1 = null;
+    species1 = document.getElementById("cf").value;
+    var sex1 = null;
+    sex1 = document.getElementById("hm").value;
+    var size1 = null;
+    size1 = document.getElementById("mpg").value;
+    var potentDangerous1 = null;
+    potentDangerous1 = document.getElementById("pe").value;
+    var neighborhood1 = null;
+    neighborhood1 = document.getElementById("localidad").value;
+    alert(microchip + " " + species1 + " " + sex1 + " " + size1 + " " + potentDangerous1 + " " + neighborhood1 );
    for (var i = 0; i < allData.length; i++) {
-    if(allData[i]["microchip"] == microchip){
+    if(allData[i]["microchip"] = microchip){
+      console.log(allData[i]);
       allData[i] = {...allData[i],species : species1};  
       allData[i] = {...allData[i],sex : sex1};  
       allData[i] = {...allData[i],size : size1};  
       allData[i] = {...allData[i],potentDangerous : potentDangerous1};  
       allData[i] = {...allData[i],neighborhood : neighborhood1};  
+      console.log(allData[i]);
       break; 
     }
   }
