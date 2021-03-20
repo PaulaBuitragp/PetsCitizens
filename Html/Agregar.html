@@ -20,7 +20,7 @@
            <li><a href="ListaMascotas.html">Lista de mascotas</a></li>
            <li><a href="EditarLista.html">Editar</a></li>
            <li><a href="Agregar.html">Agregar</a></li>
-           <li><a href="Geolocalizacion.html">Geolocalización</a></li>
+           <li><a href="Geolocalizacion.html">Geolocalizacion</a></li>
          </ul>
        </nav>
        <section id="banner">
@@ -97,9 +97,22 @@
   <option value="Usaquen">Usaquen</option>
   <option value="Usme">Usme</option>
 </select>
+</p>
+<p>Raza: <select  id = "raza" name = "tamaño" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="SNAUSER">Snauser</option>
+  <option value="PASTOR ALEMAN">Pastor Aleman</option>
+  <option value="PERSA">Persa</option>
+</select>
+</p>
+<p>Dueño: <input type="text" name="Dueño" required></p>
 <p>Dirección: <input type="text" name="Direccion" required></p>
+<form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+  <input type="file" name="imagen1" />
+  <input name="ver" type="button" value = "Enviar" id="ver" onclick="agregarMascota()"/>
 <input type="reset" value="Borrar">
-<input name="ver" type="button" value = "Enviar" id="ver" onclick="agregarMascota()"/>
+</form>
+
 </form>
 </article>
 </p>
