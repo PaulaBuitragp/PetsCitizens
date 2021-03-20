@@ -3,7 +3,6 @@
   d3.dsv(";","../Data/PetsCitizens.csv")
   .then( function(data){
     allData = data;
-    printData();
   })
   .catch(function(error){
   //handle error
@@ -23,8 +22,12 @@
     potentDangerous = document.getElementById("pe").value;
     var neighborhood = null;
     neighborhood = document.getElementById("localidad").value;
+    var race = null;
+    var owner = null;
+    var address = null;
+    var picture = null;
     alert(microchip + " " + species + " " + sex + " " + size + " " + potentDangerous + " " + neighborhood )
-    allData.push({"microchip" : microchip, "species" : species, "sex" : sex, "size" : size, "potentDangerous" : potentDangerous, "neighborhood" : neighborhood});
+    allData.push({"microchip" : microchip, "species" : species, "sex" : sex, "size" : size, "potentDangerous" : potentDangerous, "neighborhood" : neighborhood, "race" : race, "owner" : owner, "address" : address, "picture" : picture});
     console.log(allData[allData.length - 1]);
   }
 
@@ -41,6 +44,10 @@
     potentDangerous1 = document.getElementById("pe").value;
     var neighborhood1 = null;
     neighborhood1 = document.getElementById("localidad").value;
+    var race1 = null;
+    var owner1 = null;
+    var address1 = null;
+    var picture1 = null;
     alert(microchip + " " + species1 + " " + sex1 + " " + size1 + " " + potentDangerous1 + " " + neighborhood1 );
    for (var i = 0; i < allData.length; i++) {
     if(allData[i]["microchip"] = microchip){
@@ -50,6 +57,10 @@
       allData[i] = {...allData[i],size : size1};  
       allData[i] = {...allData[i],potentDangerous : potentDangerous1};  
       allData[i] = {...allData[i],neighborhood : neighborhood1};  
+      allData[i] = {...allData[i],race : race1}; 
+      allData[i] = {...allData[i],owner : owner1}; 
+      allData[i] = {...allData[i],address : address1}; 
+      allData[i] = {...allData[i],picture : picture1}; 
       console.log(allData[i]);
       break; 
     }
