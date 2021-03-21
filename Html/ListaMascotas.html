@@ -3,6 +3,7 @@
   <title>Pets Citizens</title>
   <meta charset="utf-8" />
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script type="text/javascript" src="..\js\min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="..\css\main.css" />
@@ -42,8 +43,7 @@
         </header>
 
       </article>
-      <input name="ver" type="button" value = "Mostrar" id="ver" onclick="crearTabla()"/>
-      <div>
+      <div id = "contenido">
         <table id = "table" class="table table-dark table-striped table-bordered">
           <thead> 
             <tr> 
@@ -56,14 +56,24 @@
             </tr>  
           </thead>
           <tbody id = "crearTabla">
-            
+
           </tbody>
         </table>
+
+        <div>
+        <div id="outer">
+            <table id = "table" class="table table-dark table-striped table-bordered">
+          <thead> 
+          </thead>
+          <tbody id = "crearTabla">
+          </tbody>
       </div>
     </div>
   </div>
 </div>
-<script type="text/javascript" src="..\js\min.js"></script>
+
+
+
 <!-- JQUERY -->
 <script src="https://code.jquery.com/jquery-3.4.1.js"
 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
@@ -74,6 +84,7 @@ integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="ano
 <!-- BOOTSTRAP -->
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
 </script>
+
 <script>
   $(document).ready(function () {
     $('#table').DataTable({
@@ -104,7 +115,36 @@ integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="ano
     });
   });
 </script>
-
-
+<script src="jquery-2.0.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $first = $(".first");
+            var i = 0;
+            $(".prev").click(function () {
+                ++i;
+                if ($('#outer div').length / 2 < i) {
+                    i = 0;
+                    $('#outer .first').css('background', 'blue');
+                    $first = $(".first");                   
+                } else {
+                    $first = $first.prev();
+                    $("#outer div").css("background", "green");
+                    $first.css("background", "blue");
+                }
+            });
+            $(".next").click(function () {
+                ++i;
+                if ($('#outer div').length / 2 < i) {
+                    i = 0;
+                    $('#outer .first').css('background', 'blue');
+                    $first = $(".first");
+                } else {
+                    $first = $first.next();
+                    $("#outer div").css("background", "green");
+                    $first.css("background", "blue");
+                }
+            });
+        });
+    </script>
 </body>
 </html>

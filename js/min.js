@@ -2,17 +2,18 @@ var allData;
 
 d3.dsv(";","../Data/PetsCitizens.csv")
 .then( function(data){
-  allData = data;
+  allData = data; 
+  crearTabla();
 })
 .catch(function(error){
 //handle error
 });
 
-
 function crearTabla(){
-  for (var i = 0; i < 100; i++) {
-    allData[i]
-  document.getElementById("crearTabla").innerHTML += ` 
+  var contenido1 = document.querySelector('#crearTabla');
+  contenido1.innerHTML = '';
+  for (var i = 0; i < 200; i++) {
+  contenido1.innerHTML += ` 
   <tr> 
   <td>${allData[i]["microchip"]}</td> 
   <td>${allData[i]["species"]}</td> 
@@ -85,5 +86,40 @@ function editarMascota(){
 
 }
 
-
-
+function mostrarMascota(){
+  console.log(allData[20000]);
+  var microchip = document.getElementById("microchip1").value;
+  alert(microchip);
+  var contenido = document.querySelector('#mostrarAgregar');
+  contenido.innerHTML = '';
+  for (var i = 0; i < allData.length; i++) {
+    if(allData[i]["microchip"] = microchip){
+      contenido.innerHTML += ` 
+  <table id = "table" class="table table-dark table-striped table-bordered">
+  <thead>
+  <tr> 
+  <td>Microchip</td> 
+  <td>Species</td> 
+  <td>Sex</td> 
+  <td>Size</td> 
+  <td>PotentDangerous</td> 
+  <td>Neighborhood</td> 
+  </tr>  
+  </thead>
+  <tbody>
+  <tr> 
+  <td>${allData[i]["microchip"]}</td> 
+  <td>${allData[i]["species"]}</td> 
+  <td>${allData[i]["sex"]}</td> 
+  <td>${allData[i]["size"]}</td> 
+  <td>${allData[i]["potentDangerous"]}</td> 
+  <td>${allData[i]["neighborhood"]}</td> 
+  </tr>   
+  </tbody>
+  </table>
+  `
+  break;
+    }
+  
+  }
+}
