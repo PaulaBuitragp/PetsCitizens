@@ -45,8 +45,8 @@ function agregarMascota(){
   var address = null;
   var picture = null;
   alert(microchip + " " + species + " " + sex + " " + size + " " + potentDangerous + " " + neighborhood )
-  allData.push({"microchip" : microchip, "species" : species, "sex" : sex, "size" : size, "potentDangerous" : potentDangerous, "neighborhood" : neighborhood, "race" : race, "owner" : owner, "address" : address, "picture" : picture});
-  console.log(allData[allData.length - 1]);
+  allData.unshift({"microchip" : microchip, "species" : species, "sex" : sex, "size" : size, "potentDangerous" : potentDangerous, "neighborhood" : neighborhood, "race" : race, "owner" : owner, "address" : address, "picture" : picture});
+  console.log(allData[0]);
 }
 
 function editarMascota(){
