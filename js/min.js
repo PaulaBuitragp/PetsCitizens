@@ -12,7 +12,7 @@ d3.dsv(";","../Data/PetsCitizens.csv")
 function crearTabla(){
   var contenido1 = document.querySelector('#crearTabla');
   contenido1.innerHTML = '';
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 500; i++) {
   contenido1.innerHTML += ` 
   <tr> 
   <td>${allData[i]["microchip"]}</td> 
