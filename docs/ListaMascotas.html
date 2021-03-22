@@ -4,10 +4,11 @@
   <meta charset="utf-8" />
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script type="text/javascript" src="..\js\min.js"></script>
-  <link rel="stylesheet" href="..\css\main.css" />
-  <link rel="stylesheet" href="..\css\estilos.css" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="..\css\main.css" />
+  <link rel="stylesheet" href="..\css\estilos.css" />
+  
     <style>
      table.dataTable thead {
            background-color:#7952b3;
@@ -24,8 +25,8 @@
           <ul>
            <li class="current"><a href="Index.html">Inicio</a></li>
            <li><a href="ListaMascotas.html">Lista de mascotas</a></li>
-           <li><a href="EditarLista.html">Editar</a></li>
-           <li><a href="Agregar.html">Agregar</a></li>
+           <li><a href="#formulario">Editar</a></li>
+           <li><a href="#formulario">Agregar</a></li>
            <li><a href="Geolocalizacion.html">Geolocalizacion</a></li>
          </ul>
        </nav>
@@ -73,7 +74,7 @@
     <div>
   <br/>
   <br/>
-  <form action="Agregar.html" method="get">
+  <form id = "formulario" action="Agregar.html" method="get">
        <p>Microchip: <input id = "microchip" type="number" name="Microchip" size="70" placeholder="Escriba el microchip" required></p>
        <p>Especie: <select  id = "cf" name = "especie" class="select-css"> required>
         <option value="">--Seleccione--</option>
@@ -132,8 +133,8 @@
   <option value="PERSA">Persa</option>
 </select>
 </p>
-<p>Dueño: <input type="text" name="Dueño" required></p>
-<p>Dirección: <input type="text" name="Direccion" required></p>
+<p>Dueño: <input id = "dueno" type="text" name="owner" size="70" placeholder="Escriba el dueño" required></p>
+<p>Dirección: <input id = "addres" type="text" name="addres" size="70" placeholder="Escriba la  dirección" required></p>
 <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
   <input type="file" name="imagen1" />
   <input name="ver" type="button" value = "Guardar" id="ver" onclick="agregarMascota()"/>
