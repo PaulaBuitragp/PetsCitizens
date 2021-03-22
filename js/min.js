@@ -9,7 +9,18 @@ d3.dsv(";","../Data/PetsCitizens.csv")
 //handle error
 });
 
+function nuevasPropiedades(){
+  for (var i = 0; i < allData.length; i++) {
+    allData[i][ "race" ] = "Sin asignar";
+    allData[i][ "owner" ] = "Sin asignar";
+    allData[i][ "address" ] = "Sin asignar";
+    allData[i][ "picture" ] = "Sin asignar";
+
+  }
+}
+
 function crearTabla(){
+  nuevasPropiedades();
   var contenido1 = document.querySelector('#crearTabla');
   contenido1.innerHTML = '';
   for (var i = 0; i < 500; i++) {
@@ -21,6 +32,10 @@ function crearTabla(){
   <td>${allData[i]["size"]}</td> 
   <td>${allData[i]["potentDangerous"]}</td> 
   <td>${allData[i]["neighborhood"]}</td> 
+  <td>${allData[i]["race"]}</td> 
+  <td>${allData[i]["owner"]}</td> 
+  <td>${allData[i]["address"]}</td> 
+  <td>${allData[i]["picture"]}</td> 
   </tr>  
   `
   }
@@ -87,14 +102,14 @@ function editarMascota(){
 }
 
 function mostrarMascota(){
-  console.log(allData[20000]);
+  
   var microchip = document.getElementById("microchip1").value;
-  alert(microchip);
+  if(microchip != ""){
   var contenido = document.querySelector('#mostrarAgregar');
-  contenido.innerHTML = '';
-  for (var i = 0; i < allData.length; i++) {
-    if(allData[i]["microchip"] = microchip){
-      contenido.innerHTML += ` 
+  var pet = allData.find(pets=>pets.microchip === microchip);
+  console.log(pet);
+  contenido.innerHTML = ``;
+  contenido.innerHTML += ` 
   <table id = "table" class="table table-dark table-striped table-bordered">
   <thead>
   <tr> 
@@ -104,22 +119,30 @@ function mostrarMascota(){
   <td>Size</td> 
   <td>PotentDangerous</td> 
   <td>Neighborhood</td> 
+  <td>Raza</td> 
+  <td>Dueño</td> 
+  <td>Dirección</td> 
+  <td>Foto</td> 
   </tr>  
   </thead>
   <tbody>
   <tr> 
-  <td>${allData[i]["microchip"]}</td> 
-  <td>${allData[i]["species"]}</td> 
-  <td>${allData[i]["sex"]}</td> 
-  <td>${allData[i]["size"]}</td> 
-  <td>${allData[i]["potentDangerous"]}</td> 
-  <td>${allData[i]["neighborhood"]}</td> 
+  <td>${pet["microchip"]}</td> 
+  <td>${pet["species"]}</td> 
+  <td>${pet["sex"]}</td> 
+  <td>${pet["size"]}</td> 
+  <td>${pet["potentDangerous"]}</td> 
+  <td>${pet["neighborhood"]}</td> 
+  <td>${pet["race"]}</td> 
+  <td>${pet["owner"]}</td> 
+  <td>${pet["address"]}</td> 
+  <td>${pet["picture"]}</td> 
   </tr>   
   </tbody>
   </table>
   `
-  break;
-    }
-  
+}else{
+  alert("Por favor ingrese el microchip de la mascota que desea buscar");
   }
 }
+  
