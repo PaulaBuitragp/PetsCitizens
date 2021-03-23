@@ -25,7 +25,7 @@ function nuevasPropiedades(){
 function crearTabla(){
   var contenido1 = document.querySelector('#crearTabla');
   contenido1.innerHTML = '';
-  for (var i = 0; i < 500; i++) {
+  for (var i = 0; i < 1000; i++) {
     contenido1.innerHTML += ` 
     <tr> 
     <td>${allData[i]["microchip"]}</td> 
