@@ -11,7 +11,7 @@
   
     <style>
      table.dataTable thead {
-           background-color:#7952b3;
+           background-color:#171414;
            color:aliceblue;
        }  
     </style>
@@ -44,7 +44,7 @@
         <header>
 
           <h1>Lista mascotas</h1>
-          <input name="ver" type="button" value = "ActualizarLista" id="ver" onclick="crearTabla()"/>
+          <input class = "boton_personalizado" name="ver" type="button" value = "ActualizarLista" id="ver" onclick="crearTabla()"/>
           <p>...</p>
         </header>
 
@@ -135,8 +135,9 @@
 </p>
 <p>Dueño: <input id = "dueno" type="text" name="owner" size="70" placeholder="Escriba el dueño" required></p>
 <p>Dirección: <input id = "addres" type="text" name="addres" size="70" placeholder="Escriba la  dirección" required></p>
+<p>Imagen: <input id = "image" type="text" name="image" size="70" placeholder="Copie la url de la imagen" required></p>
 <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
-  <input type="file" name="imagen1" />
+ 
   <input name="ver" type="button" value = "Guardar" id="ver" onclick="agregarMascota()"/>
   <input name="ver" type="button" value = "Editar" id="ver" onclick="editarMascota()"/>
 <input type="reset" value="Borrar">

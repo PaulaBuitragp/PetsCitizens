@@ -35,7 +35,7 @@ function crearTabla(){
     <td>${allData[i]["race"]}</td> 
     <td>${allData[i]["owner"]}</td> 
     <td>${allData[i]["address"]}</td> 
-    <td>${allData[i]["picture"]}</td> 
+    <td><img src=${allData[i]["picture"]} width="100" height="100"></td> 
     </tr>  
     `
   }
@@ -62,6 +62,7 @@ function agregarMascota(){
   var address = null;
   address = document.getElementById("addres").value;
   var picture = null;
+  picture = document.getElementById("image").value;
   if((microchip != "") && (species != "--Seleccione--") && (sex != "--Seleccione--") && (size != "--Seleccione--") && (potentDangerous != "--Seleccione--") && (neighborhood != "--Seleccione--") && (race != "--Seleccione--") && (owner != "") && (address != "")){
   allData.unshift({"microchip" : microchip, "species" : species, "sex" : sex, "size" : size, "potentDangerous" : potentDangerous, "neighborhood" : neighborhood, "race" : race, "owner" : owner, "address" : address, "picture" : picture});
   console.log(allData[0]);
@@ -151,7 +152,7 @@ function mostrarMascota(){
     <td>${pet["race"]}</td> 
     <td>${pet["owner"]}</td> 
     <td>${pet["address"]}</td> 
-    <td>${pet["picture"]}</td> 
+    <td><img src=${pet["picture"]} width="100" height="100"></td> 
     </tr>   
     </tbody>
     </table>

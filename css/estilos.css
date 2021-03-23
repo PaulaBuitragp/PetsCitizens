@@ -2,7 +2,7 @@
 form{
   padding: 60px;
   max-width: 600px;
-  background-color: #E7E7E7;
+  background-color: #6C98A6;
   margin: 0 auto;
 }
 
@@ -21,7 +21,7 @@ form input, form textarea{
 
 form button {
 	display: block;
-	background-color: #0095eb;
+	background-color: #272C2D;
 	padding: 10px 45px 10px 45px;
 	border: 0;
 	font-size: 1em; 
@@ -29,7 +29,7 @@ form button {
   font-family: "Roboto", sans-serif;
 }
 form button: hover{
-	background-color: #046193;
+	background-color: #272C2D;
 }
 textarea { resize: none; }
 
@@ -132,3 +132,42 @@ p{
 body {
   background-color: #252323; 
 }
+
+.caja { 
+font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+color: #ffffff; 
+font-size: 18px; 
+font-weight: 400; 
+text-align: center; 
+background: #889ccf; 
+margin: 0 0 25px; 
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 0px 35px 0px; 
+-moz-border-radius: 35px 0px 35px 0px; 
+-webkit-border-radius: 35px 0px 35px 0px; 
+border: 2px solid #5878ca;
+}
+
+#texto{
+  text-align: justify;
+}
+
+#wellcome{
+  border: black 5px solid;
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
+  .boton_personalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
